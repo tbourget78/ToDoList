@@ -1,0 +1,70 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: 'Roboto',sans-serif;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 40%, rgba(253,187,45,1) 100%);
+}
+
+.italic{
+  font-style: italic;
+}
+
+.form{
+  display: flex;
+  justify-content: space-around;
+  height: 8vh;
+  margin-bottom: 3vh;
+}
+
+.champ, .btnAjouter{
+  border: 2px solid teal;
+  border-radius: 3px;
+}
+
+.champ{
+  width: 82vw;
+  background-color: rgb(204, 204, 204);
+  padding-left: 1vw;
+  font-size: 5vw;
+}
+
+.btnAjouter{
+  width: 17vw;
+  background-color:rgb(139, 255, 139);
+  color: blue;
+  cursor: pointer;
+}
+
+ol{
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  padding: 0 1vw 0 1vw;
+}
+
+li{
+  counter-increment: my-awesome-counter;
+  color: teal;
+  background-color: black; 
+
+  margin-bottom: 2px;
+  border-radius: 3px;
+  font-size: 4vw;
+
+  text-transform: capitalize;
+}
+
+li::before{
+  content:counter(my-awesome-counter)". ";
+  color:rebeccapurple;
+
+
+}
