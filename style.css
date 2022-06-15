@@ -11,7 +11,7 @@ html, body{
 body{
   font-family: 'Roboto',sans-serif;
   background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 40%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(-50deg, white 10%, rgba(34,193,195,1) 75%);
 }
 
 .italic{
@@ -42,6 +42,16 @@ body{
   background-color:rgb(139, 255, 139);
   color: blue;
   cursor: pointer;
+  font-size: 6vw;
+  transition-duration: 500ms;
+}
+
+.btnAjouter:hover{
+  background-color: rgb(0, 255, 0);
+}
+
+.btnAjouter:active{
+  background-color: rgb(0, 255, 0);
 }
 
 ol{
@@ -51,20 +61,101 @@ ol{
 }
 
 li{
+  display: flex;
+  align-items: center;
   counter-increment: my-awesome-counter;
   color: teal;
-  background-color: black; 
+  background-color: white; 
 
   margin-bottom: 2px;
-  border-radius: 3px;
-  font-size: 4vw;
+  border-radius: 5px;
+  font-size: 6vw;
 
   text-transform: capitalize;
 }
 
 li::before{
-  content:counter(my-awesome-counter)". ";
-  color:rebeccapurple;
+  content:counter(my-awesome-counter)"- ";
+  color:black;
+}
 
 
+.delete{
+  color: red;
+  border: solid 1px white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+.delete:hover{
+  background-color: orangered;
+  color: white;
+}
+
+.urgent{
+  cursor: pointer;
+  color: gray;
+  transition-duration: 300ms;
+
+}
+
+.urgent:hover{
+  transform: rotate(360deg);
+}
+
+.gold{
+  color: gold;
+}
+
+.texte{
+  display: inline-block;
+  width: 84vw;
+  word-wrap: break-word;
+}
+
+.spanOpt{
+  display:flex ;
+  flex: auto;
+  justify-content: flex-end;
+}
+
+.material-icons.md-24{
+  font-size: 6vw;
+}
+
+.noTache{
+  font-style: italic;
+  font-size: 6vw;
+  margin-left: 1vw;
+}
+
+/*MEDIAS QUERIES*//*MEDIAS QUERIES*//*MEDIAS QUERIES*//*MEDIAS QUERIES*//*MEDIAS QUERIES*//*MEDIAS QUERIES*/
+@media screen and (min-width: 700px){
+  .champ,
+  .btnAjouter{
+    font-size: 2.5rem;
+  }
+
+  .noTache,
+  .material-icons.md-24,
+  li{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-height: 500px){
+  .champ,
+  .btnAjouter{
+    height: 8vw;
+  }
+
+  .noTache{
+    padding-top: 25px;
+    transition: 500ms;
+  }
+
+  li{
+    margin-top: 35px;
+    transition: 500ms;
+
+  }
 }
